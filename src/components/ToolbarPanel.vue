@@ -1,5 +1,21 @@
 <template>
     <div class="toolbar">
+        <el-tooltip :content="this.i18n['tooltip.start']" placement="bottom">
+            <span class="command" data-command="start">
+                <span class="el-icon-caret-right"/>
+            </span>
+        </el-tooltip>
+        <el-tooltip :content="this.i18n['tooltip.pause']" placement="bottom">
+            <span class="command" data-command="pause">
+                <span class="el-icon-video-pause"/>
+            </span>
+        </el-tooltip>
+        <el-tooltip :content="this.i18n['tooltip.end']" placement="bottom">
+            <span class="command" data-command="end">
+                <span class="el-icon-video-play"/>
+            </span>
+        </el-tooltip>
+        <span class="separator"/>
         <el-tooltip :content="this.i18n['tooltip.undo']" placement="bottom">
             <span class="command" data-command="undo">
                 <span class="iconfont icon-undo"/>
@@ -11,7 +27,7 @@
             </span>
         </el-tooltip>
         <span class="separator"/>
-        <!-- <el-tooltip :content="this.i18n['tooltip.copy']" placement="bottom">
+        <el-tooltip :content="this.i18n['tooltip.copy']" placement="bottom">
             <span class="command" data-command="copy">
                 <span class="iconfont icon-copy-o"/>
             </span>
@@ -20,7 +36,7 @@
             <span class="command" data-command="paste">
                 <span class="iconfont icon-paster-o"/>
             </span>
-        </el-tooltip> -->
+        </el-tooltip>
         <el-tooltip :content="this.i18n['tooltip.delete']" placement="bottom">
             <span class="command" data-command="delete">
                 <span class="iconfont icon-delete-o"/>
@@ -47,7 +63,7 @@
                 <span class="iconfont icon-fit"/>
             </span>
         </el-tooltip>
-        <!-- <span class="separator"/>
+        <span class="separator"/>
         <el-tooltip :content="this.i18n['tooltip.toFront']" placement="bottom">
             <span class="command" data-command="toFront">
                 <span class="iconfont icon-to-front"/>
@@ -57,7 +73,7 @@
             <span class="command" data-command="toBack">
                 <span class="iconfont icon-to-back"/>
             </span>
-        </el-tooltip> -->
+        </el-tooltip>
     </div>
 </template>
 
@@ -71,7 +87,7 @@
     .toolbar {
         text-align: left;
         width: 100%;
-        padding: 8px 0;
+        padding: 2px 0;
         background-color: #fff;
         border: 1px solid #E9E9E9;
         box-shadow: 0 8px 12px 0 rgba(0, 52, 107, 0.04);

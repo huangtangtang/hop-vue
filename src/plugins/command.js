@@ -175,6 +175,81 @@ class Command{
       },
       shortcutCodes: [['metaKey', 'shiftKey', 'z'], ['ctrlKey', 'shiftKey', 'z']],
     });
+    // 开始
+    // !!todo
+    cmdPlugin.registerCommand('start', {
+      queue: false,
+      enable: function(graph) {
+        const zoom = graph.getZoom();
+        const maxZoom = graph.get('maxZoom');
+        const minZoom = graph.get('minZoom');
+        return zoom <= maxZoom && zoom >= minZoom;
+      },
+      execute: function(graph) {
+        const manager = cmdPlugin.get('_command');
+        const maxZoom = graph.get('maxZoom');
+        const zoom = graph.getZoom();
+        this.originZoom = zoom;
+        let currentZoom = zoom + manager.zoomDelta;
+        if(currentZoom > maxZoom)
+          currentZoom = maxZoom;
+        graph.zoomTo(currentZoom);
+      },
+      back: function(graph) {
+        graph.zoomTo(this.originZoom);
+      },
+      shortcutCodes: [['metaKey', '='], ['ctrlKey', '=']],
+    });
+    // 暂停
+    // !!todo
+    cmdPlugin.registerCommand('pause', {
+      queue: false,
+      enable: function(graph) {
+        const zoom = graph.getZoom();
+        const maxZoom = graph.get('maxZoom');
+        const minZoom = graph.get('minZoom');
+        return zoom <= maxZoom && zoom >= minZoom;
+      },
+      execute: function(graph) {
+        const manager = cmdPlugin.get('_command');
+        const maxZoom = graph.get('maxZoom');
+        const zoom = graph.getZoom();
+        this.originZoom = zoom;
+        let currentZoom = zoom + manager.zoomDelta;
+        if(currentZoom > maxZoom)
+          currentZoom = maxZoom;
+        graph.zoomTo(currentZoom);
+      },
+      back: function(graph) {
+        graph.zoomTo(this.originZoom);
+      },
+      shortcutCodes: [['metaKey', '='], ['ctrlKey', '=']],
+    });
+    // 结束 
+    // !! todo
+    cmdPlugin.registerCommand('end', {
+      queue: false,
+      enable: function(graph) {
+        const zoom = graph.getZoom();
+        const maxZoom = graph.get('maxZoom');
+        const minZoom = graph.get('minZoom');
+        return zoom <= maxZoom && zoom >= minZoom;
+      },
+      execute: function(graph) {
+        const manager = cmdPlugin.get('_command');
+        const maxZoom = graph.get('maxZoom');
+        const zoom = graph.getZoom();
+        this.originZoom = zoom;
+        let currentZoom = zoom + manager.zoomDelta;
+        if(currentZoom > maxZoom)
+          currentZoom = maxZoom;
+        graph.zoomTo(currentZoom);
+      },
+      back: function(graph) {
+        graph.zoomTo(this.originZoom);
+      },
+      shortcutCodes: [['metaKey', '='], ['ctrlKey', '=']],
+    });
     cmdPlugin.registerCommand('undo', {
       queue: false,
       enable: function(graph) {

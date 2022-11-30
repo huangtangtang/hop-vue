@@ -49,6 +49,10 @@ export default {
   'inclusiveGateway': '包容网关',
   'task': '活动',
   'catch': '捕获事件',
+
+  'tooltip.start': '启动',
+  'tooltip.pause': '暂停',
+  'tooltip.end': '停止',
   'tooltip.undo': '撤销',
   'tooltip.redo': '重做',
   'tooltip.copy': '复制',
