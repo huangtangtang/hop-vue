@@ -1,0 +1,39 @@
+{
+  "name": "hop-vue-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@antv/dom-util": "2.0.2",
+    "@antv/matrix-util": "2.0.7",
+    "@antv/g-canvas": "^0.4.12",
+    "@antv/g6": "3.5.2",
+    "@antv/util": "~2.0.9",
+    "axios":"^0.21.4",
+    "copy-webpack-plugin": "^5.1.2",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.11.3",
+    "driver.js": "^0.9.8",
+    "element-ui": "^2.15.10",
+    "svg-sprite-loader":"^6.0.11",
+    "vue": "^2.6.14",
+    "vue-router":"^3.5.4",
+    "vuex": "^3.6.2",
+    "x2js": "^3.4.4"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "core-js": "^3.3.2",
+    "sass": "1.26.5",
+    "numericjs": "^1.2.6",
+    "raw-loader": "^3.1.0",
+    "sass-loader": "8.0.2",
+    "vue-template-compiler": "2.6.14"
+  }
+}
